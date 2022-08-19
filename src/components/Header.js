@@ -4,9 +4,11 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 const Header = () => {
   return (
     <View style={styles.headerContainer}>
-      <View style={styles.iconWrapper}><Icon name="camera" size={24} color="black" /></View>
       <View style={styles.titleTextWrapper}><Text style={styles.titleText}>Instagram</Text></View>
-      <View style={styles.iconWrapper}><Icon style={styles.icon}  name="instagram" size={28} color="#f9524d" /><Icon style={styles.icon} name="send" size={24} color="black" /></View>
+      <View style={styles.iconWrapper}>
+        <Icon name="camera" size={24} color="black" />
+        <Icon style={styles.icon}  name="instagram" size={28} color="#f9524d" />
+        <Icon style={styles.icon} name="send" size={24} color="black" /></View>
     </View>
   );
 };
@@ -18,13 +20,11 @@ const styles = StyleSheet.create({
         flexDirection:"row",
         justifyContent:"space-between",
         padding:16,
-        borderBottomWidth:0.5,
-        borderBottomColor:"gray",
         width:"100%"
     },
     titleTextWrapper:{
-        flex:3,
-        alignItems:"center"
+        flex:2,
+        alignItems:"flex-start"
     },
     titleText:{
         fontSize:24,
