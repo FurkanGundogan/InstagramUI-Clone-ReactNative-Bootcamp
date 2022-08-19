@@ -1,6 +1,7 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import Icon from 'react-native-vector-icons/FontAwesome';
+import AndIcon from 'react-native-vector-icons/AntDesign';
 import LikedUser from './LikedUser';
 
 const PostDetailsArea = ({likedUsers}) => {
@@ -8,12 +9,12 @@ const PostDetailsArea = ({likedUsers}) => {
     <View style={styles.container}>
       <View style={styles.actionsWrapper}>
       <Icon style={styles.actionButton} name="heart" size={24} color="red" />
-      <Icon style={styles.actionButton} name="message1" size={24} color="black" />
+      <AndIcon style={styles.actionButton} name="message1" size={24} color="black" />
       <Icon style={styles.actionButton} name="send" size={24} color="black" />
       </View>
       <View style={styles.likedUsers}>
       {
-        likedUsers.map((user)=><LikedUser profileImg={user.profileImg}/>)
+        likedUsers.map((user,i)=><LikedUser key={i} profileImg={user.profileImg}/>)
       }
       <Text style={styles.likedUsersText}>{"furkang and 1414 people liked"}</Text>
       </View>
