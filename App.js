@@ -10,10 +10,12 @@ import React from 'react';
 
 import {StyleSheet} from 'react-native';
 import Home from './src/screens/Home';
+import {SafeAreaProvider} from 'react-native-safe-area-context';
+const App = () => (
+  <SafeAreaProvider>
+    <Home />
+  </SafeAreaProvider>)
 
-const App = () => {
-  return <Home />;
-};
 
 const styles = StyleSheet.create({});
 

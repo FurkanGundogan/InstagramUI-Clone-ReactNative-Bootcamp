@@ -8,6 +8,8 @@ const StoryArea = () => {
   return (
     <ScrollView contentContainerStyle={{
         paddingRight:16,
+       marginBottom:32,
+     
     }} horizontal style={styles.storyContainer}>
       <CreateStoryItem imageUrl={firstUrl}/>
       <Story imageUrl={firstUrl}></Story>
@@ -28,9 +30,10 @@ export default StoryArea
 const styles = StyleSheet.create({
     storyContainer:{
         marginTop:16,
-        paddingBottom:16,
         borderBottomWidth:0.5,
         borderBottomColor:"gray",
         width:"100%",
+        height:170
+  
     },
 })
