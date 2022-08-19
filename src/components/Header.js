@@ -24,12 +24,13 @@ const styles = StyleSheet.create({
     },
     titleTextWrapper:{
         flex:2,
-        alignItems:"flex-start"
+        alignItems:"flex-start",
+        marginLeft:4
     },
     titleText:{
         fontSize:24,
         fontFamily:"fantasy",
-        fontWeight:"600",
+        fontWeight:"800",
         color:"black",
         letterSpacing:-1.5
        
