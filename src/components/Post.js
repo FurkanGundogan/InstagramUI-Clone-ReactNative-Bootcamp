@@ -1,12 +1,15 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import PostHeader from './PostHeader'
-
-const Post = () => {
+import PostImage from './PostImage';
+import PostDetailsArea from './PostDetailsArea';
+const profileImg="https://i.picsum.photos/id/1005/5760/3840.jpg?hmac=2acSJCOwz9q_dKtDZdSB-OIK1HUcwBeXco_RMMTUgfY";
+const Post = ({ownerName,profileImg}) => {
   return (
     <View>
-        <PostHeader/>
-      <Text>Post</Text>
+    <PostHeader ownerName={ownerName} profileImg={profileImg}/>
+    <PostImage/>
+    <PostDetailsArea/>
     </View>
   )
 }
