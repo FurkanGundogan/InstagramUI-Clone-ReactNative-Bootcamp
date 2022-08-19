@@ -9,7 +9,7 @@ const PostHeader = ({ownerName, profileImg}) => {
           <Image source={{uri:profileImg}} style={styles.image}/>
         </View>
         <View style={styles.ownerName}>
-        <Text>{ownerName}</Text>
+        <Text style={styles.ownerNameText}>{"@"+ownerName}</Text>
         </View>
         
       </View>
@@ -23,7 +23,7 @@ const PostHeader = ({ownerName, profileImg}) => {
 export default PostHeader;
 
 const styles = StyleSheet.create({
-  headerContainer: {flexDirection: 'row', flex: 1},
+  headerContainer: {flexDirection: 'row', flex: 1,marginBottom:12},
   leftSide: {flexDirection: 'row', flex: 1,alignItems:"center"},
   rightSide: {
     flex: 1,
@@ -31,9 +31,13 @@ const styles = StyleSheet.create({
   more: {
     alignSelf: 'flex-end',
     left: -12,
+    color:"black"
   },
   ownerName:{
     marginLeft:12
+  },
+  ownerNameText:{
+    color:"black"
   },
   imageContainer: {
     width: 50,
