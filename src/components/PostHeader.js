@@ -37,7 +37,8 @@ const styles = StyleSheet.create({
     marginLeft:12
   },
   ownerNameText:{
-    color:"black"
+    color:"black",
+    fontWeight:"600"
   },
   imageContainer: {
     width: 50,
